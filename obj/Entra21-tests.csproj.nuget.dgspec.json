@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Gabrielle\\primeira-aula\\Entra21-tests\\Entra21-tests.csproj": {}
+    "C:\\Test\\Entra21-tests\\Entra21-tests.csproj": {}
   },
   "projects": {
-    "C:\\Gabrielle\\primeira-aula\\Entra21-tests\\Entra21-tests.csproj": {
+    "C:\\Test\\Entra21-tests\\Entra21-tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Gabrielle\\primeira-aula\\Entra21-tests\\Entra21-tests.csproj",
+        "projectUniqueName": "C:\\Test\\Entra21-tests\\Entra21-tests.csproj",
         "projectName": "Entra21-tests",
-        "projectPath": "C:\\Gabrielle\\primeira-aula\\Entra21-tests\\Entra21-tests.csproj",
+        "projectPath": "C:\\Test\\Entra21-tests\\Entra21-tests.csproj",
         "packagesPath": "C:\\Users\\Edina\\.nuget\\packages\\",
-        "outputPath": "C:\\Gabrielle\\primeira-aula\\Entra21-tests\\obj\\",
+        "outputPath": "C:\\Test\\Entra21-tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Edina\\AppData\\Roaming\\NuGet\\NuGet.Config"
