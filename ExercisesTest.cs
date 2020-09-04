@@ -6,6 +6,17 @@ namespace Entra21_tests
 {
     public class ExercisesTest
     {
+        private void AssertExercise5(Double[] womenAge, int expectedValue)
+        {
+            var exercises = new Exercises();
+
+            // Quando / Ação 
+            Double returnedValues = exercises.Exercise5(womenAge);
+
+            // Deve / Asserções 
+            Assert.Equal(expectedValue, returnedValues); 
+        }
+
         // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício1B,
         // então a aplicação deverá restornar todos os números de 1 a 10 de forma decrescente.
 
@@ -92,31 +103,37 @@ namespace Entra21_tests
         public void should_return_8_when_passed_4_and_6_and_8()
         {
             // Dado / Steup
-            var exercises = new Exercises();
-            var myList = new List<int>(){4, 6, 8};
+           var exercises = new Exercises();
+           var Lista = new List<double>(){0,0,0};
 
             // Quando / Ação 
-            double result = exercises.Exercise4(myList);
+            double returnedValues = exercises.Exercise4();        
 
             // Deve / Asserções
-            Assert.Equal(6, result);         
+            Assert.Equal(0, returnedValues);
+                     
         }
         
          [Fact]
-        public void returns_the_porcentage_of_age_between_18_and_35()
+        public void should_return_60percent_when_passed_5_numbers_contaning_3_between_18_and_35()
         {
             // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício4,
             // então a aplicação deverá restornar a porcentagem das mulheres entre 18 e 35.
 
+            // Dado / Steup
+            var womenAge = new Double[5]{15,18,35,20,11};
+            AssertExercises(womenAge, 60);         
+        }
+
+        [Fact]
+        public void should_return_0percent_when_passed_5_numbers_contaning_none_between_18_and_35()
+        {
+            // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício4,
+            // então a aplicação deverá restornar a porcentagem das mulheres entre 18 e 35.
 
             // Dado / Steup
-            var exercises = new Exercises();
-
-            // Quando / Ação 
-            Double returnedValues = exercises.Exercise5();
-
-            // Deve / Asserções
-            Assert.Equal(60, returnedValues);         
+            var womenAge = new Double[5]{15,13,11,40,11};
+            AssertExercise5(womenAge, 0);        
         }
 
         // [Fact]
@@ -130,7 +147,7 @@ namespace Entra21_tests
         //     var exercises = new Exercises();
 
         //     // Quando / Ação 
-        //     double returnedValues = exercises.Exercise6();
+        //     double returnedValues = exercises.Exercise7();
 
         //     // Deve / Asserções
 
