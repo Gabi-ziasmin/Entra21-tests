@@ -55,30 +55,41 @@ namespace Entra21_tests
             return sum;
         }
 
-        // [Fact]
-        // public int[] Exercise3()
-        // {
-        //     var numbers = new int[100];
-        //     var counter = 0;
+        public int[] Exercise3()
+        {
+            var numbers = new int[100];
+            var counter = 0;
 
-        //     for (int i = 0; i < 200; i+=2)
-        //     {
-        //         var index = counter - 1;
-        //         numbers[i] = counter; 
-        //     }
+            for (int i = 1; i < 200; i+=2)
+            {
+                numbers[counter] = i; 
+                counter++;
+            }
 
-        //     return numbers;
-        // }
+            return numbers;
+        }
 
     
-        public double Exercise4()
+        public double Exercise4(List<int> ages)
         {
-            return 0;
+            var sum = 0.0;
+
+            var respostas = ages.Count;
+
+            foreach (var item in ages)
+            {
+                sum += item;
+            }
+
+            var media = (sum / respostas);
+
+            return media;
+
         }
 
         public double Exercise5(double[] womenAge)
         {
-            var idade = 0;
+            var idade = 0; 
 
            for (int i = 0; i < womenAge.Length; i++)
            {
@@ -91,22 +102,38 @@ namespace Entra21_tests
 
            return porcent;           
         }
+        public double Exercise6(int candidato1, int candidato2)
+        {
+            var winer = 0;
 
+            if (candidato1 > candidato2)
+            {
+                winer = 1;
+            }
+            else if (candidato2 > candidato1)
+            {
+                winer = 2;
+            }
+            else
+            {
+                winer = 3;
+            }
 
+            return winer;
 
-        // public double Exercise7()
-        // {
-        //     var ears = 3;
-        //     var dayCig = 10;
-        //     var price = 7.0;
+        }
 
-        //     var totalEars = ears * 365;
-        //     var totalCig = dayCig * totalEars;
-        //     var totalPrice = price / 20;
+        public double Exercise7(int ears, int dayCig, double price)
+        {
+            var totalEars = ears * 365;
+            var totalCig = dayCig * totalEars;
+            var totalPrice = price / 20;
+            double resposta = 0.0;
 
-        //     var totalGasto = totalCig * totalPrice; 
+            var totalGasto = (totalCig * totalPrice).ToString("0.00"); 
+            resposta = double.Parse(totalGasto);
 
-        //    return totalGasto;           
-        // }
+           return resposta;           
+        }
     }
 }
