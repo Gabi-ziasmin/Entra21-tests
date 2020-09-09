@@ -135,5 +135,49 @@ namespace Entra21_tests
 
            return resposta;           
         }
-    }
-}
+        // public Boolean Exercise8(int x, int y)
+        // {
+        //    var result = false;
+
+        //    if (x % y == 0 && y % x == 0)
+        //    {
+        //        result = true;               
+        //    }
+
+        // return result;
+        // }
+        
+        public Boolean Exercise9(int num1, int num2, int num3)
+        {
+            var result = false;
+
+            if (num1 > num2+num3)
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
+        public string Exercise10(double a, double b)
+        {
+            var maior = ""; 
+
+            if (a > b)
+            {
+                maior = "a"; 
+            }
+            else if (b > a)
+            {
+                maior = "b";
+            }
+            else
+            {
+                maior = "igual";
+            }
+
+            return maior;
+        }
+
+    }          
+}   

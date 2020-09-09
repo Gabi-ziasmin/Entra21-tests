@@ -64,7 +64,7 @@ namespace Entra21_tests
         }
 
         [Fact]
-        public void return_the_sum_of_integers_from_1_to_100()
+        public void should_return_5050_the_sum_of_integers_from_1_to_100()
         {
             // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício2,
             // então a aplicação deverá restornar a soma dos números inteiros de 1 a 100.
@@ -81,7 +81,7 @@ namespace Entra21_tests
         }
 
         [Fact]
-        public void return_all_odd_numbers_less_than_200()
+        public void should_return_all_odd_numbers_less_than_200()
         {
             // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício3,
             // então a aplicação deverá restornar todos os números impares menores que 200.
@@ -100,7 +100,7 @@ namespace Entra21_tests
         
 
         [Fact]
-        public void should_return_8_when_passed_4_and_6_and_8()
+        public void should_return_6_when_passed_4_and_6_and_8()
         {
             // Dado / Steup
            var exercises = new Exercises();
@@ -137,7 +137,7 @@ namespace Entra21_tests
         }
 
         [Fact]
-        public void should_return_2_when_passed_2_to_candidate1_and_3_to_candidate2()
+        public void should_return_2_when_passed_2_votes_to_candidate1_and_3_votes_to_candidate2()
         {
             // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício4,
             // então a aplicação deverá restornar a porcentagem das mulheres entre 18 e 35.
@@ -156,13 +156,14 @@ namespace Entra21_tests
             Assert.Equal(2, returnedValues);         
         }
         [Fact]
-        public void should_return__when_passed_5_numbers_contaning_3_between_18_and_3()
+        public void should_return_2555_when_passed_3_numbers_ears_2_days_10_and_price_7()
         {
             // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício4,
             // então a aplicação deverá restornar a porcentagem das mulheres entre 18 e 35.
 
 
             // Dado / Steup
+            
             var exercises = new Exercises();
             var ears = 2;
             var dayCig = 10;
@@ -174,6 +175,46 @@ namespace Entra21_tests
             // Deve / Asserções
 
             Assert.Equal(2555, returnedValues);         
+        }
+        // [Fact]
+        // public void should_return_true_when_passed_2_numbers_cousins_5_and_25()
+        // {
+        //     // Dado/Steup
+        //     var x = 5;
+        //     var y = 25;
+        //     var exercises = new Exercises();
+
+        //     // Quando/Ação
+        //     var result = exercises.Exercise8(x , y);
+
+        //     // Deve/Ações
+        //     Assert.Equal(false, result);
+        // }
+        [Fact]
+        public void Should_return_true_when_num1_bigger_sum_of_num2_and_num3()
+        {
+            // Dado - Steup
+            var num1 = 4;
+            var num2 = 2;
+            var num3 = 1;
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var result = exercises.Exercise9(num1, num2, num3);
+
+            Assert.Equal(true, result);
+
+        }
+
+        public void aa_a()
+        {
+            var a = 1.1;
+            var b  = 1.2;
+            var exercises = new Exercises();
+
+            var result = exercises.Exercise10(a, b);
+
+            Assert.Equal("b", result);
         }
     }
 }
