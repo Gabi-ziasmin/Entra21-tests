@@ -136,24 +136,21 @@ namespace Entra21_tests
             AssertExercise5(womenAge, 0);        
         }
 
-        [Fact]
-        public void should_return_2_when_passed_2_votes_to_candidate1_and_3_votes_to_candidate2()
+        [Theory]
+        [InlineData(2,3,2)]
+        [InlineData(3,2,1)]
+        [InlineData(2,2,3)]
+        public void should_return_2_when_passed_2_votes_to_candidate1_and_3_votes_to_candidate2(int candidato1,int candidato2, int winer)
         {
-            // Dado que a aplicação está preparada. Quando o usuário chamar o Exercício4,
-            // então a aplicação deverá restornar a porcentagem das mulheres entre 18 e 35.
-
-
             // Dado / Steup
             var exercises = new Exercises();
-            var candidato1 = 2;
-            var candidato2 = 3;
 
             // Quando / Ação 
-            var returnedValues = exercises.Exercise6(candidato1, candidato2);
+            var returnedValues = exercises.Exercise6(candidato1, candidato2, winer);
 
             // Deve / Asserções
 
-            Assert.Equal(2, returnedValues);         
+            Assert.Equal(winer, returnedValues);         
         }
         [Fact]
         public void should_return_2555_when_passed_3_numbers_ears_2_days_10_and_price_7()
@@ -206,7 +203,7 @@ namespace Entra21_tests
 
         }
 
-        public void aa_a()
+        public void Should_return_a()
         {
             var a = 1.1;
             var b  = 1.2;
@@ -215,6 +212,29 @@ namespace Entra21_tests
             var result = exercises.Exercise10(a, b);
 
             Assert.Equal("b", result);
+        }
+        [Theory]
+        [InlineData(2,2,0)]
+        [InlineData(3,2,1)]
+        [InlineData(7,3,1)]
+        public void Should_retun_a(int num1, int num2, double soma)
+        {
+            var exercises = new Exercises();
+
+            var result = exercises.Exercise11(num1, num2);
+
+            Assert.Equal(result, soma);
+        }
+        [Theory]
+        [InlineData(new int[4]{1,2,3,4},6)]
+        [InlineData(new int[4]{4,4,1,3},8)]
+        public void Should_return7(int[] num, int pares)
+        {
+            var exercises = new Exercises();
+
+            var result = exercises.Exercise12(num);
+
+            Assert.Equal(result, pares);
         }
     }
 }

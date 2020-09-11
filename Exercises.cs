@@ -102,10 +102,8 @@ namespace Entra21_tests
 
            return porcent;           
         }
-        public double Exercise6(int candidato1, int candidato2)
+        public double Exercise6(int candidato1, int candidato2, int winer)
         {
-            var winer = 0;
-
             if (candidato1 > candidato2)
             {
                 winer = 1;
@@ -178,6 +176,22 @@ namespace Entra21_tests
 
             return maior;
         }
+         public double Exercise11(int num1, int num2)
+        {
+            var soma = num1%num2;
 
+            return soma;
+        }
+        public int Exercise12(int[] num)
+        {
+            var pares = 0;
+
+            for (int i = 0; i < num.Length; i+=1)
+            {
+                pares =+ num[i];
+            }
+
+            return pares;
+        }
     }          
 }   
