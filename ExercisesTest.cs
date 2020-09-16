@@ -203,7 +203,7 @@ namespace Entra21_tests
 
         }
 
-        public void Should_return_a()
+        public void Should_return_the_higher_number_or_if_are_equals()
         {
             var a = 1.1;
             var b  = 1.2;
@@ -228,13 +228,26 @@ namespace Entra21_tests
         [Theory]
         [InlineData(new int[4]{1,2,3,4},6)]
         [InlineData(new int[4]{4,4,1,3},8)]
-        public void Should_return7(int[] num, int pares)
+        [InlineData(new int[6]{2,2,2,2,2,7},10)]
+        public void Should_return_the_sum_of_4_numbers_but_only_the_pairs(int[] num, int pares)
         {
             var exercises = new Exercises();
 
             var result = exercises.Exercise12(num);
 
             Assert.Equal(result, pares);
+        }
+
+        [Theory]
+        [InlineData(new int[10]{1,2,3,4,5,6,7,8,9,10},10)]
+        [InlineData(new int[10]{1,2,3,4,5,4,3,8,2,3},8)]
+        public void Should_return_the_higher_number_between_10_numbers(int[] num, int maior)
+        {
+            var exercises = new Exercises();
+
+            var result = exercises.Exercise13(num);
+
+            Assert.Equal(result, maior);
         }
     }
 }

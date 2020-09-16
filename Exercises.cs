@@ -186,12 +186,30 @@ namespace Entra21_tests
         {
             var pares = 0;
 
-            for (int i = 0; i < num.Length; i+=1)
+            for (int i = 0; i < num.Length; i++)
             {
-                pares =+ num[i];
+                if (num[i] % 2 == 0)
+                {
+                    pares += num[i];
+                }
             }
 
             return pares;
+        }
+        
+        public int Exercise13(int[] num)
+        {
+            var maior = 0;
+
+            for (int i = 0; i < num.Length; i++)
+            {
+                if (num[i] > maior)
+                {
+                    maior = num[i];
+                }
+            }
+
+            return maior;
         }
     }          
 }   
