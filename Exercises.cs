@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Xunit;
 
 namespace Entra21_tests
@@ -133,17 +135,17 @@ namespace Entra21_tests
 
            return resposta;           
         }
-        // public Boolean Exercise8(int x, int y)
-        // {
-        //    var result = false;
-
-        //    if (x % y == 0 && y % x == 0)
-        //    {
-        //        result = true;               
-        //    }
-
-        // return result;
-        // }
+        public Boolean Exercise8(double x, double y)
+        {
+           if (x % y != 0)
+           {
+               return false;
+           }
+           else
+           {
+               return true;
+           }
+        }
         
         public Boolean Exercise9(int num1, int num2, int num3)
         {
@@ -211,5 +213,60 @@ namespace Entra21_tests
 
             return maior;
         }
+
+        public string Exercise14(List<double> num)
+        {
+           num.Sort();
+           var result = new StringBuilder();
+           foreach (var item in num)
+           {
+               result.Append(item + " < ");
+           }
+           result.Remove(result.Length-3, 3);
+
+           return result.ToString();
+        }
+
+        public (int, int) Exercise15(List<double> num)
+        {
+            int mult3 = 0;
+            int mult5 = 0;
+            foreach (var item in num)
+            {
+                if (item != 0)
+                {
+                    if (item % 3 == 0)
+                    {
+                        mult3++;
+                        if (item % 5 == 0)
+                        {
+                            mult5++;
+                        }
+                    }
+                }
+            }
+            return(mult3, mult5);
+        }
+
+        public IEnumerable<int> Exercise17(int number)
+        {
+            // var results = new List<int>();
+
+            // for (int i = 1; i < 11; i++)
+            // {
+            //     results.Add(number * i);
+            // }
+            var multiplicationTable = new List<int>(){1,2,3,4,5,6,7,8,9,10};
+
+            return multiplicationTable.Select(item => item * number);
+        
+        }
+
+        // public IEnumerable<int> ExerciseTest(int number)
+        // {
+        //     var sum = new List<int>(){1,2,3,4,5,6,7,8,9,10};
+
+        //     return sum.Select(item => item * number);
+        // }
     }          
 }   

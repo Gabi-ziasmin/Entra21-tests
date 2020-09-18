@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Entra21_tests
@@ -173,20 +174,20 @@ namespace Entra21_tests
 
             Assert.Equal(2555, returnedValues);         
         }
-        // [Fact]
-        // public void should_return_true_when_passed_2_numbers_cousins_5_and_25()
-        // {
-        //     // Dado/Steup
-        //     var x = 5;
-        //     var y = 25;
-        //     var exercises = new Exercises();
+        [Theory]
+        [InlineData(60, 3, true)]
+        [InlineData(-54, -8, false)]
+        public void should_return_true_when_passed_2_numbers_cousins_5_and_25(double x, double y, bool returned)
+        {
+            // Dado/Steup
+            var exercises = new Exercises();
 
-        //     // Quando/Ação
-        //     var result = exercises.Exercise8(x , y);
+            // Quando/Ação
+            var result = exercises.Exercise8(x , y);
 
-        //     // Deve/Ações
-        //     Assert.Equal(false, result);
-        // }
+            // Deve/Ações
+            Assert.Equal(returned, result);
+        }
         [Fact]
         public void Should_return_true_when_num1_bigger_sum_of_num2_and_num3()
         {
@@ -249,5 +250,70 @@ namespace Entra21_tests
 
             Assert.Equal(result, maior);
         }
+        [Theory]
+        [InlineData(new double[3]{3,2,1}, "1 < 2 < 3")]
+        public void Should_return_crescent_order(double[] num, string ordem)
+        {
+            var exercises = new Exercises();
+
+            string result = exercises.Exercise14(num.ToList());
+
+            Assert.Equal(ordem, result);
+        }
+
+        //DADO que a aplicação está pronta, QUANDO o usuário informar 10 números 
+        //DEVE retornar quantos são múltiplos de 3 e quantos são múltiplos de 5
+        [Theory]
+        [InlineData(new double[10]{56,45,23,22,33,12,10,45,55,16},4,2)]
+        public void Should_return_how_many_multiples_of_3_and_5(double[] num, int mult3, int mult5)
+        {
+            var exercise = new Exercises();
+
+            var result = exercise.Exercise15(num.ToList());
+            (int, int) expected = (mult3, mult5);
+
+            Assert.Equal(expected, result);    
+        }
+
+        [Theory]
+        [InlineData(6, new int[10]{6,12,18,24,30,36,42,48,54,60})]
+        [InlineData(5, new int[10]{5,10,15,20,25,30,35,40,45,50})]
+        public void Should_return_6_multiplied_by_1_to_10_when_passed_6(int number, int[] expectedResult)
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+
+            // Quando / Ação
+            IEnumerable<int> result = exercises.Exercise17(number);
+
+            // Deve / Asserções
+            // Assert.Collection(
+            //     result,
+            //     item1 => { Assert.Equal(expectedResult[0], item1); },
+            //     item2 => { Assert.Equal(expectedResult[1], item2); },
+            //     item3 => { Assert.Equal(expectedResult[2], item3); },
+            //     item4 => { Assert.Equal(expectedResult[3], item4); },
+            //     item5 => { Assert.Equal(expectedResult[4], item5); },
+            //     item6 => { Assert.Equal(expectedResult[5], item6); },
+            //     item7 => { Assert.Equal(expectedResult[6], item7); },
+            //     item8 => { Assert.Equal(expectedResult[7], item8); },
+            //     item9 => { Assert.Equal(expectedResult[8], item9); },
+            //     item10 => { Assert.Equal(expectedResult[9], item10); }
+            // );
+
+
+        }
+
+        // [Theory]
+        // [InlineData(5, new int[10]{5,10,15,20,25,30,35,40,45,50})]
+        //DADO que a aplicação esteja pronta, QUANDO o usuário informar um número 
+        //DEVE retornar a tabuada de 1 a 10
+        // public void Should_return_the_number_multiplied_by_1_to_10(int number, int[] sum)
+        // {
+        //     var exercise = new Exercises();
+
+        //     IEnumerable<int> resutl = exercise.ExerciseTest(number);
+
+        // }
     }
 }
