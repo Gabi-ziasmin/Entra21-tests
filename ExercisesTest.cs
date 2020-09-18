@@ -275,6 +275,20 @@ namespace Entra21_tests
             Assert.Equal(expected, result);    
         }
 
+        //DADO que a aplicação esta pronta, QUANDO o usuário informar seu salário
+        //DEVE retornar o salário líquido de acordo com os descontos
+        [Theory]
+        [InlineData(399.90, 399.90)]
+        [InlineData(2000.01, 1400.007)]
+        public void Should_return_the_liquid_pay_of_the_sale(double salario, double esperado)
+        {
+            var exercise = new Exercises();
+
+            var result = exercise.Exercise16(salario);
+
+            Assert.Equal(esperado, result);
+        }
+
         [Theory]
         [InlineData(6, new int[10]{6,12,18,24,30,36,42,48,54,60})]
         [InlineData(5, new int[10]{5,10,15,20,25,30,35,40,45,50})]
@@ -315,5 +329,19 @@ namespace Entra21_tests
         //     IEnumerable<int> resutl = exercise.ExerciseTest(number);
 
         // }
+
+        [Theory]
+        [InlineData(3, 3.90)]
+        //DADO que a aplicação esta pronta, QUANDO o usuário impornar o total de maçãs que ele irá comprar 
+        // DEVE retornar o custo total da compra.
+        public void Should_return_the_total_purchase_cost(double quantidade, double expected)
+        {
+            var exercise = new Exercises();
+
+            var result = exercise.Exercise18(quantidade);
+
+            Assert.Equal(expected, result); 
+            
+        } 
     }
 }

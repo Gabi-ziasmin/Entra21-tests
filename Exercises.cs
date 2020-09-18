@@ -248,6 +248,32 @@ namespace Entra21_tests
             return(mult3, mult5);
         }
 
+        public double Exercise16(double salario)
+        {
+            double desconto;
+
+            if (salario <= 600.00)
+            {
+                desconto = 0;
+                return salario - desconto;
+            }
+            else if (salario > 600.00 && salario <= 1000.00)
+            {
+                desconto = (salario * 20)/100;
+                return salario - desconto;
+            }
+            else if (salario > 1200.00 && salario <= 2000.00)
+            {
+                desconto = (salario * 25)/100;
+                return salario - desconto;
+            }
+            else
+            {
+                desconto = (salario * 30)/100;
+                return salario - desconto;
+            }
+        }
+
         public IEnumerable<int> Exercise17(int number)
         {
             // var results = new List<int>();
@@ -268,5 +294,17 @@ namespace Entra21_tests
 
         //     return sum.Select(item => item * number);
         // }
+
+        public double Exercise18(double quantidade)
+        {
+            if (quantidade < 12)
+            {
+                return (quantidade * 1.30);
+            }
+            else if (quantidade >= 12)
+            {
+                return (quantidade * 1.00);
+            }
+        }
     }          
 }   
