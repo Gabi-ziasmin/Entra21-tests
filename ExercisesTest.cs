@@ -319,28 +319,26 @@ namespace Entra21_tests
         }
 
         // [Theory]
-        // [InlineData(5, new int[10]{5,10,15,20,25,30,35,40,45,50})]
-        //DADO que a aplicação esteja pronta, QUANDO o usuário informar um número 
-        //DEVE retornar a tabuada de 1 a 10
-        // public void Should_return_the_number_multiplied_by_1_to_10(int number, int[] sum)
+        // [InlineData(3, 3.90)]
+        // //DADO que a aplicação esta pronta, QUANDO o usuário impornar o total de maçãs que ele irá comprar 
+        // // DEVE retornar o custo total da compra.
+        // public void Should_return_the_total_purchase_cost(double quantidade, double expected)
         // {
         //     var exercise = new Exercises();
 
-        //     IEnumerable<int> resutl = exercise.ExerciseTest(number);
+        //     var result = exercise.Exercise18(quantidade);
 
-        // }
+        //     Assert.Equal(expected, result); 
+            
+        // } 
 
         [Theory]
-        [InlineData(3, 3.90)]
-        //DADO que a aplicação esta pronta, QUANDO o usuário impornar o total de maçãs que ele irá comprar 
-        // DEVE retornar o custo total da compra.
-        public void Should_return_the_total_purchase_cost(double quantidade, double expected)
+        [InlineData(5, new int [10]{5,10,15,20,25,30,35,40,45,50})]
+        public void Should_return_numbers_multipied(int number, int[] esperadoCalculadora)
         {
-            var exercise = new Exercises();
+            var exercises= new Exercises();
 
-            var result = exercise.Exercise18(quantidade);
-
-            Assert.Equal(expected, result); 
+            IEnumerable<int> result = exercises.ExerciseTest(number);
             
         } 
     }

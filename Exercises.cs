@@ -288,23 +288,23 @@ namespace Entra21_tests
         
         }
 
-        // public IEnumerable<int> ExerciseTest(int number)
+        // public double Exercise18(double quantidade)
         // {
-        //     var sum = new List<int>(){1,2,3,4,5,6,7,8,9,10};
-
-        //     return sum.Select(item => item * number);
+        //     if (quantidade < 12)
+        //     {
+        //         return (quantidade * 1.30);
+        //     }
+        //     else if (quantidade >= 12)
+        //     {
+        //         return (quantidade * 1.00);
+        //     }
         // }
 
-        public double Exercise18(double quantidade)
-        {
-            if (quantidade < 12)
-            {
-                return (quantidade * 1.30);
-            }
-            else if (quantidade >= 12)
-            {
-                return (quantidade * 1.00);
-            }
-        }
+       public IEnumerable<int> ExerciseTest(int number)
+       {
+           var calculadora = new List<int>(){1,2,3,4,5,6,7,8,9,10};
+
+           return calculadora.Select(item => item * number);
+       }
     }          
 }   
