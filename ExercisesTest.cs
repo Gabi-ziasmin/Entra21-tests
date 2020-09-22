@@ -318,19 +318,19 @@ namespace Entra21_tests
 
         }
 
-        // [Theory]
-        // [InlineData(3, 3.90)]
-        // //DADO que a aplicação esta pronta, QUANDO o usuário impornar o total de maçãs que ele irá comprar 
-        // // DEVE retornar o custo total da compra.
-        // public void Should_return_the_total_purchase_cost(double quantidade, double expected)
-        // {
-        //     var exercise = new Exercises();
+        [Theory]
+        [InlineData(3, "3,90")]
+        //DADO que a aplicação esta pronta, QUANDO o usuário impornar o total de maçãs que ele irá comprar 
+        // DEVE retornar o custo total da compra.
+        public void Should_return_the_total_purchase_cost(double quantidade, string expected)
+        {
+            var exercise = new Exercises();
 
-        //     var result = exercise.Exercise18(quantidade);
+            var result = exercise.Exercise18(quantidade);
 
-        //     Assert.Equal(expected, result); 
+            Assert.Equal(expected, result); 
             
-        // } 
+        } 
 
         [Theory]
         [InlineData(5, new int [10]{5,10,15,20,25,30,35,40,45,50})]

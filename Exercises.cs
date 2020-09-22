@@ -288,17 +288,18 @@ namespace Entra21_tests
         
         }
 
-        // public double Exercise18(double quantidade)
-        // {
-        //     if (quantidade < 12)
-        //     {
-        //         return (quantidade * 1.30);
-        //     }
-        //     else if (quantidade >= 12)
-        //     {
-        //         return (quantidade * 1.00);
-        //     }
-        // }
+        public string Exercise18(double quantidade)
+        {
+            if (quantidade < 12)
+            {
+                return ((quantidade * 1.30).ToString("0.00"));
+            }
+            else
+            {
+                return ((quantidade * 1.00).ToString("0.00"));
+            }
+
+        }
 
        public IEnumerable<int> ExerciseTest(int number)
        {

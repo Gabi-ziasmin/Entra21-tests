@@ -40,5 +40,26 @@ namespace entra21_tests
                     : candidate;
             }).ToList();
         }
+          public List<(int id, string name, int votes)> GetWinners()
+        {
+            //Candidato na posição 0 ja esta como o vencedor
+            var winners = new List<(int id, string name, int votes)>{Candidates[0]};
+
+            for (int i = 1; i < Candidates.Count; i++)
+            {
+                if (Candidates[i].votes > winners[0].votes)
+                {
+                    //Aqui a lista foi 'limpa' com o .Clear e foi adicionado o candidato na posição i
+                    winners.Clear();
+                    winners.Add(Candidates[i]);
+                }
+                else if (Candidates[i].votes == winners[0].votes)
+                {
+                    winners.Add(Candidates[i]);
+                }
+            }
+            return winners;
+        }
+           
     }
 }
