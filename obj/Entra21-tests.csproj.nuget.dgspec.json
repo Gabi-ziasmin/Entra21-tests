@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj": {}
+    "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj": {}
   },
   "projects": {
-    "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj": {
+    "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj",
+        "projectUniqueName": "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj",
         "projectName": "Entra21-tests",
-        "projectPath": "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj",
+        "projectPath": "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj",
         "packagesPath": "C:\\Users\\entra21\\.nuget\\packages\\",
-        "outputPath": "C:\\GabrielleY\\Entra21-tests\\obj\\",
+        "outputPath": "C:\\GabrielleY\\Entra21-Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\entra21\\AppData\\Roaming\\NuGet\\NuGet.Config",

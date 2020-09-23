@@ -7,6 +7,7 @@ namespace Entra21_tests
     {
         public double Sum(double firstNumber, double secondNumber)
         {
+            //Guid myGuid = new Guid(); 
             var result = firstNumber + secondNumber;
 
             return result;

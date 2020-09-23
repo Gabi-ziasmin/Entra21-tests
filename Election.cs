@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,14 +8,14 @@ namespace entra21_tests
     {
         // Propriedade abaixo:
         // Sempre em PascalCase
-        public List<(int id, string name, int votes)> Candidates { get; set; }
+        public List<(Guid id, string name, int vote, string CPF)> Candidates { get; set; }
         
-        public bool CreateCandidates(List<(int id, string name)> candidates, string password)
+        public bool CreateCandidates(List<(string nome, string CPF)> candidates, string password)
         {
             if (password == "Pa$$w0rd")
             {
                 Candidates = candidates.Select(candidate => {
-                    return (candidate.id, candidate.name, 0);
+                    return (Guid.NewGuid(), candidate.nome, 0, candidate.CPF);
                 }).ToList();
 
                 return true;
@@ -25,31 +26,36 @@ namespace entra21_tests
             }
         }
 
-        public List<string> ShowMenu()
+        // ToDo: Criar método que retorne um Guid que represente o candidato pesquisado por CPF
+
+        // ToDo: Este método deve retornar a lista de candidatos que tem o mesmo nome informado
+        public List<(Guid id, string name, int votes, string CPF)> GetCandidatesByName(string name)
         {
-            return Candidates
-                .Select(candidate => $"Vote {candidate.id} para o candidato: {candidate.name}")
-                .ToList();
+            return Candidates.Where(x => x.name == name).ToList();
         }
 
-        public void Vote(int id)
+        public Guid GetCandidateIdByCPF(string CPF)
         {
-            Candidates = Candidates.Select(candidate => {
+            return Candidates.First(x => x.name == CPF).id;
+        }
+
+        public void Vote(Guid id)
+        {
+                Candidates = Candidates.Select(candidate => {
                 return candidate.id == id
-                    ? (candidate.id, candidate.name, candidate.votes + 1)
+                    ? (candidate.id, candidate.name, candidate.votes + 1, candidate.CPF)
                     : candidate;
             }).ToList();
         }
-          public List<(int id, string name, int votes)> GetWinners()
+
+        public List<(Guid id, string name, int votes, string CPF)> GetWinners()
         {
-            //Candidato na posição 0 ja esta como o vencedor
-            var winners = new List<(int id, string name, int votes)>{Candidates[0]};
+            var winners = new List<(Guid id, string name, int votes, string CPF)>{Candidates[0]};
 
             for (int i = 1; i < Candidates.Count; i++)
             {
                 if (Candidates[i].votes > winners[0].votes)
                 {
-                    //Aqui a lista foi 'limpa' com o .Clear e foi adicionado o candidato na posição i
                     winners.Clear();
                     winners.Add(Candidates[i]);
                 }
@@ -60,6 +66,5 @@ namespace entra21_tests
             }
             return winners;
         }
-           
     }
 }
