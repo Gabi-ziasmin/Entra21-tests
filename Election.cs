@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace entra21_tests
+namespace Entra21_tests
 {
     public class Election
     {
+        static void Main(){}
         // Propriedade abaixo:
         // Sempre em PascalCase
         public List<(Guid id, string name, int votes, string CPF)> Candidates { get; set; }
-        
         public bool CreateCandidates(List<(string nome, string CPF)> candidates, string password)
         {
             if (password == "Pa$$w0rd")
