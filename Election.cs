@@ -8,7 +8,7 @@ namespace entra21_tests
     {
         // Propriedade abaixo:
         // Sempre em PascalCase
-        public List<(Guid id, string name, int vote, string CPF)> Candidates { get; set; }
+        public List<(Guid id, string name, int votes, string CPF)> Candidates { get; set; }
         
         public bool CreateCandidates(List<(string nome, string CPF)> candidates, string password)
         {

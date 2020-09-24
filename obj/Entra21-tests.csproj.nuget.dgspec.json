@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj": {}
+    "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj": {}
   },
   "projects": {
-    "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj": {
+    "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj",
+        "projectUniqueName": "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj",
         "projectName": "Entra21-tests",
-        "projectPath": "C:\\GabrielleY\\Entra21-Tests\\Entra21-tests.csproj",
-        "packagesPath": "C:\\Users\\entra21\\.nuget\\packages\\",
-        "outputPath": "C:\\GabrielleY\\Entra21-Tests\\obj\\",
+        "projectPath": "C:\\GabrielleY\\Entra21-tests\\Entra21-tests.csproj",
+        "packagesPath": "C:\\Users\\Edina\\.nuget\\packages\\",
+        "outputPath": "C:\\GabrielleY\\Entra21-tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\entra21\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Edina\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
