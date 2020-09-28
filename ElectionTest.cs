@@ -70,12 +70,12 @@ namespace Entra21_tests
             // Dado / Setup
             // OBJETO election
             var election = new Election();
-            var names = ("Fernando","Ana");
-            var CPFs = ("56558445754","65626532659");
-            var candidates = new List<(string name, string CPF)>{names, CPFs};
+            var Fernando = ("Fernando","56558445754");
+            var Ana = ("Ana","65626532659");
+            var candidates = new List<(string name, string CPF)>{Fernando, Ana};
             election.CreateCandidates(candidates, "Pa$$w0rd");
-            var fernandoId = election.GetCandidateIdByCPF(names.Item1);
-            var anaId = election.GetCandidateIdByCPF(names.Item2);
+            var fernandoId = election.GetCandidateIdByCPF(Fernando.Item2);
+            var anaId = election.GetCandidateIdByCPF(Ana.Item2);
 
             // Quando / Ação
             // Estamos acessando o MÉTODO ShowMenu do OBJETO election
@@ -119,12 +119,12 @@ namespace Entra21_tests
             // Dado / Setup
             // OBJETO election
             var election = new Election();
-            var names = ("Fernando","Ana");
-            var CPFs = ("56558445754","65626532659");
-            var candidates = new List<(string name, string CPF)>{names, CPFs};
+            var Fernando = ("Fernando","56558445754");
+            var Ana = ("Ana","65626532659");
+            var candidates = new List<(string name, string CPF)>{Fernando, Ana};
             election.CreateCandidates(candidates, "Pa$$w0rd");
-            var fernandoId = election.GetCandidateIdByCPF(names.Item1);
-            var anaId = election.GetCandidateIdByCPF(names.Item2);
+            var fernandoId = election.GetCandidateIdByCPF(Fernando.Item2);
+            var anaId = election.GetCandidateIdByCPF(Ana.Item2);
             
             // Quando / Ação
             // Estamos acessando o MÉTODO ShowMenu do OBJETO election
@@ -140,17 +140,17 @@ namespace Entra21_tests
         }
 
         [Fact]
-        public void should_return_both_candidates_when_occurs_raw()
+        public void should_return_candidates_id_when_CPF_is_correct()
         {
             // Dado / Setup
             // OBJETO election
             var election = new Election();
-            var names = ("Fernando","Ana");
-            var CPFs = ("56558445754","65626532659");
-            var candidates = new List<(string name, string CPF)>{names, CPFs};
+            var Fernando = ("Fernando","56558445754");
+            var Ana = ("Ana","65626532659");
+            var candidates = new List<(string name, string CPF)>{Fernando, Ana};
             election.CreateCandidates(candidates, "Pa$$w0rd");
-            var fernandoCPF = election.GetCandidateIdByCPF(names.Item1);//Fernando
-            var anaCPF = election.GetCandidateIdByCPF(names.Item2);//Ana
+            var fernandoCPF = election.GetCandidateIdByCPF(Fernando.Item2);//Fernando
+            var anaCPF = election.GetCandidateIdByCPF(Ana.Item2);//Ana
             
             // Quando / Ação
             // Estamos acessando o MÉTODO ShowMenu do OBJETO election

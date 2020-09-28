@@ -6,10 +6,10 @@ namespace Entra21_tests
 {
     public class Election
     {
-        static void Main(){}
+    
         // Propriedade abaixo:
         // Sempre em PascalCase
-        public List<(Guid id, string name, int votes, string CPF)> Candidates { get; set; }
+        public List<(Guid id, string name, int votes, string CPF)> Candidates { get; private set; }
         public bool CreateCandidates(List<(string nome, string CPF)> candidates, string password)
         {
             if (password == "Pa$$w0rd")
@@ -36,7 +36,7 @@ namespace Entra21_tests
 
         public Guid GetCandidateIdByCPF(string CPF)
         {
-            return Candidates.First(x => x.name == CPF).id;
+            return Candidates.First(x => x.CPF == CPF).id;
         }
 
         public void Vote(Guid id)
