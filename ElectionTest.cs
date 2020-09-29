@@ -161,8 +161,8 @@ namespace Entra21_tests
             // Deve / Asserções
             var candidateFernando = winners.Find(x => x.id == fernandoCPF);
             var candidateAna = winners.Find(x => x.id == anaCPF);
-            Assert.Equal(1, candidateFernando.votes);
-            Assert.Equal(1, candidateAna.votes);
+            Assert.Equal("56558445754", candidateFernando.CPF);
+            Assert.Equal("65626532659", candidateAna.CPF);
         }
     }
 }
