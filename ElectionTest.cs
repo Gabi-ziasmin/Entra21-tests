@@ -51,14 +51,14 @@ namespace Entra21_tests
 
             // OBJETO election
             var election = new Election();
-            var names = ("José", "Ana");
-            var CPFs = ("25165898485", "56525148452");
-            var candidates = new List<(string name, string CPF)>{names, CPFs};
+            var Jose = ("José", "25165898485");
+            var Ana = ("Ana", "56525148452");
+            var candidates = new List<(string name, string CPF)>{Jose, Ana};
             election.CreateCandidates(candidates, "Pa$$w0rd");
             
             // Quando / Ação
-            var candidateJose = election.GetCandidatesByName(names.Item1);
-            var candidateAna = election.GetCandidatesByName(names.Item2);
+            var candidateJose = election.GetCandidatesByName(Jose.Item1);
+            var candidateAna = election.GetCandidatesByName(Ana.Item2);
 
             // Deve / Asserções
             Assert.NotEqual(candidateAna, candidateJose);
@@ -95,11 +95,11 @@ namespace Entra21_tests
             // Dado / Setup
             // OBJETO election
             var election = new Election();
-            var names = ("Fernando","Ana");
-            var CPFs = ("56558445754","65626532659");
-            var candidates = new List<(string name, string CPF)>{names, CPFs};
+            var fernando = ("Fernando","56558445754");
+            var Ana = ("Ana","65626532659");
+            var candidates = new List<(string name, string CPF)>{fernando, Ana};
             election.CreateCandidates(candidates, "Pa$$w0rd");
-            var anaId = election.GetCandidateIdByCPF(names.Item2);
+            var anaId = election.GetCandidateIdByCPF(Ana.Item2);
             
             // Quando / Ação
             // Estamos acessando o MÉTODO ShowMenu do OBJETO election
