@@ -8,7 +8,7 @@ namespace Entra21_tests
 {
     public class ListaArray1
     {
-       public int[] ExerciseTest(int[] A, int[] B)
+       public int[] Exercise1(int[] A, int[] B)
        {
            var C =  new int[4];
            for (int i = 0; i < 4; i++)
@@ -18,5 +18,20 @@ namespace Entra21_tests
 
            return C;
        }
+
+       public IEnumerable<int> Exercise2(int[] num)
+       {
+            return num.Reverse();
+       }
+
+    //    public bool Exercise3(int[] A, int num)
+    //    {
+    //        for (int i = 0; i < A.Length; i++)
+    //        {
+    //             return (A[i] == num ? true: false);                
+    //        }
+
+    //    }
+
     }          
 }   

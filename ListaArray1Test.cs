@@ -14,9 +14,27 @@ namespace Entra21_tests
         public void Should_return_A_minus_B(int[] A, int[] B, int[] Expected)
         {
             var listaA1 = new ListaArray1();
-            IEnumerable<int> result = listaA1.ExerciseTest(A,B); 
-
-            Assert.Equal(Expected, result);     
+            IEnumerable<int> result = listaA1.Exercise1(A,B);      
         }
+
+        [Fact]
+        public void Should_return_10_values_in_direct_and_reverse_order()
+        {    
+           var num = new int[10]{1,2,3,4,5,6,7,8,9,10};
+           var listaA1 = new ListaArray1();
+           IEnumerable<int> result = listaA1.Exercise2(num);
+
+           Assert.Equal(num, num);
+           Assert.Equal(new int[10]{10,9,8,7,6,5,4,3,2,1}, result);
+        }
+
+        // [Theory]
+        // [InlineData(new int[3]{1,2,3}, 3, true)]
+        // public void Should_return_the_solicited_number(int[] A, int num, bool expectedNumber)
+        // {
+        //     var listaA1 = new ListaArray1();
+        //     bool result = listaA1.Exercise3(num);
+        // }
+
     }
 }
