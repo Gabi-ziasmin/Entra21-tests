@@ -28,12 +28,15 @@ namespace Entra21_tests
            Assert.Equal(new int[10]{10,9,8,7,6,5,4,3,2,1}, result);
         }
 
-        // [Theory]
-        // [InlineData(new int[3]{1,2,3}, 3, true)]
-        // public void Should_return_the_solicited_number(int[] A, int num, bool expectedNumber)
+        // [Fact]
+        // public void Should_return_the_solicited_number()
         // {
         //     var listaA1 = new ListaArray1();
-        //     bool result = listaA1.Exercise3(num);
+        //     var A = new int[3]{1,2,3};
+
+        //     var result = listaA1.Exercise3(num, 3);
+
+        //     Assert.True(result);
         // }
 
     }
