@@ -31,5 +31,16 @@ namespace Entra21_tests
            Assert.Null(exercise.Pessoas);
            Assert.False(result);
        }
+
+       public void Should_return_the_name()
+       {
+           var exercise = new Entra21();
+           var ana = ("Ana", 15);
+           var pessoa  = new List<(string name, int age)>{ana};
+
+           var result = exercise.Buscar("Ana");   
+
+           Assert.Equal(pessoa, result);        
+       }
     }
 }

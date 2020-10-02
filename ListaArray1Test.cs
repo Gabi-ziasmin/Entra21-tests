@@ -28,13 +28,27 @@ namespace Entra21_tests
            Assert.Equal(new int[10]{10,9,8,7,6,5,4,3,2,1}, result);
         }
 
+        [Fact]
+        public void Should_return_the_solicited_number()
+        {
+            var listaA1 = new ListaArray1();
+            var A = new int[3]{1,2,3};
+
+            var result = listaA1.Exercise3(A, 3);
+
+            Assert.True(result);
+        }
+
         // [Fact]
-        // public void Should_return_the_solicited_number()
+        // //DADO que a aplicação está pronta, QUANDO o usuário informar dois arrays com 10 valores
+        // //DEVE retornar se os mesmos são iguais ou diferentes  
+        // public void Should_return_if_is_equal_or_diferent(List<int> A, List<int> B)
         // {
         //     var listaA1 = new ListaArray1();
-        //     var A = new int[3]{1,2,3};
+        //     A = new List<int>{1,2,3};
+        //     B = new List<int>{1,2,3};
 
-        //     var result = listaA1.Exercise3(num, 3);
+        //     var result = listaA1.Exercise4(A, B);
 
         //     Assert.True(result);
         // }

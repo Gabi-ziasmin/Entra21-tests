@@ -5,17 +5,23 @@ using System.Linq;
 namespace Entra21_tests
 {
     public class Election
-    {
-    
+    {  
         // Propriedade abaixo:
         // Sempre em PascalCase
-        private List<(Guid id, string name, int votes, string CPF)> candidates { get; set; }
+        public Election()
+        {
+            var cand = new Candidates();
+            cand.CandidatesReadOnly = new List<(Guid id, string name, int votes, string CPF)>{};
+        }
 
-        public IReadOnlyCollection<(Guid id, string name, int votes, string CPF)> Candidates => candidates;
         public bool CreateCandidates(List<(string name, string CPF)> candidate, string password)
         {
             if (password == "Pa$$w0rd")
             {
+                if (candidates == null )
+            {
+                return true;
+            }
                 candidates = candidate.Select(x => {
                     return (Guid.NewGuid(), x.name, 0, x.CPF);
                 }).ToList();

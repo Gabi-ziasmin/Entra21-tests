@@ -24,13 +24,29 @@ namespace Entra21_tests
             return num.Reverse();
        }
 
-    //    public bool Exercise3(int[] A, int num)
-    //    {
-    //        for (int i = 0; i < A.Length; i++)
-    //        {
-    //             return (A[i] == num ? true: false);                
-    //        }
+       public bool Exercise3(int[] A, int num)
+       {
+           var resp = false;
+           for (int i = 0; i < A.Length; i++)
+           {
+                resp =  (A[i] == num ? true: false);                
+           }
 
+           return resp;
+       }
+
+    //    public bool Exercise4(List<int> A, List<int> B)
+    //    {
+    //        var resp = true;
+    //         for (int i = 0; i < 3; i++)
+    //         {
+    //             if (A[i] != B[i])
+    //             {
+    //                 resp = false;
+    //             }
+    //         }
+
+    //         return resp;
     //    }
 
     }          

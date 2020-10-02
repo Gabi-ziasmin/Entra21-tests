@@ -8,9 +8,9 @@ namespace Entra21_tests
 {
     public class Entra21
     {
-        private List<(Guid id, string name, int age, string CPF)> pessoas { get; set; }
+        private List<(string name, int age)> pessoas { get; set; }
 
-        public IReadOnlyCollection<(Guid id, string name, int age, string CPF)> Pessoas => pessoas;
+        public IReadOnlyCollection<(string name, int age)> Pessoas => pessoas;
         public bool Cadastrar(List<(string name, int age)> people, string password)
         {
             if (password == "Certo")
@@ -25,6 +25,11 @@ namespace Entra21_tests
             {
                 return false;
             }
+        }
+
+        public List<(string name, int age)> Buscar(string name)
+        {
+            return pessoas.Where(x => x.name == name).ToList();
         }
     }          
 }   
