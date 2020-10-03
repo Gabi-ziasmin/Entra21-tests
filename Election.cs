@@ -8,10 +8,14 @@ namespace Entra21_tests
     {  
         // Propriedade abaixo:
         // Sempre em PascalCase
+        private List<Candidate> candidates { get; set; }
+
+        public IReadOnlyCollection<(Guid id, string name, int votes, string CPF)> Candidates => candidates;
+
         public Election()
         {
-            var cand = new Candidates();
-            cand.CandidatesReadOnly = new List<(Guid id, string name, int votes, string CPF)>{};
+            var candi = new Candidate();
+            candidates = new List<(Guid id, string name, int votes, string CPF)>{};
         }
 
         public bool CreateCandidates(List<(string name, string CPF)> candidate, string password)

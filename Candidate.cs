@@ -5,12 +5,14 @@ namespace Entra21_tests
 {
     public class Candidate
     {
-        private List<(Guid id, string name, int votes, string CPF)> candidates { get; set; }
-        public IReadOnlyCollection<(Guid id, string name, int votes, string CPF)> CandidatesReadOnly => candidates;
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Cpf { get; set; }
+        public int Votos { get; set; }
 
-        internal static object Where(Func<object, bool> p)
+        public Candidate(string nome, string cpf)
         {
-            throw new NotImplementedException();
         }
+
     }
 }
