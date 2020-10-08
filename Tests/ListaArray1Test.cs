@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Tests
 {
-    public class ListaArray1 
+    public class ListaArray1Test 
     {
         // Dado que a aplicação está preparada. Quando o usuário chamar informar 4 números no Array A e 4 números no Array B,
         // então a aplicação deverá restornar A menos B.

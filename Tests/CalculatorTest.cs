@@ -12,7 +12,7 @@ namespace Tests
         [InlineData(3,3,6)]
         public void should_return_the_result_of_the_sum_between_2_parameters(double firstNumber, double secondNumber, double expectedOutpt)
         {
-            var calculator = new Caculator();
+            var calculator = new Calculator();
 
             var result = calculator.Sum(firstNumber, secondNumber);
 
@@ -24,7 +24,7 @@ namespace Tests
         [InlineData(new double[5]{15,13,11,40,11}, 0)]
         public void should_return(double[] womenAge, double porcent)
         {
-            var calculator = new Caculator();
+            var calculator = new Calculator();
             
             var result = calculator.Test(womenAge);
 

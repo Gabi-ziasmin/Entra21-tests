@@ -1,9 +1,8 @@
 using System;
-using Xunit;
 
-namespace Entra21_tests
+namespace Domain
 {
-    class Domain
+    public class Calculator
     {
         public double Sum(double firstNumber, double secondNumber)
         {

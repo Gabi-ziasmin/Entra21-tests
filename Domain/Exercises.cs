@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Xunit;
 
-namespace Entra21_tests
+namespace Domain
 {
-    public class Domain
+    public class Exercises
     {
         public int[] Exercise1A()
         {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Entra21_tests
+namespace Domain
 {
     public class Candidate
     {
