@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using Domain;
 using Xunit;
 
-namespace Entra21_tests
+namespace Tests
 {
-    public class Tests
+    public class ElectionTest
     {
         [Fact]
         public void should_not_create_candidates_when_password_is_incorrect()

@@ -1,10 +1,11 @@
 
 using System;
+using Domain;
 using Xunit;
 
-namespace Entra21_tests
+namespace Tests
 {
-    public class CaculatorTest
+    public class CalculatorTest
     {
         [Theory]
         [InlineData(2,2,4)]

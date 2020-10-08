@@ -1,0 +1,3 @@
+C:\GabrielleY\Entra21-tests\Tests\obj\Debug\netcoreapp3.1\Tests.csprojAssemblyReference.cache
+C:\GabrielleY\Entra21-tests\Tests\obj\Debug\netcoreapp3.1\Tests.AssemblyInfoInputs.cache
+C:\GabrielleY\Entra21-tests\Tests\obj\Debug\netcoreapp3.1\Tests.AssemblyInfo.cs
