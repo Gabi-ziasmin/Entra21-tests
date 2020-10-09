@@ -40,18 +40,29 @@ namespace Tests
             Assert.True(result);
         }
 
-        // [Fact]
-        // //DADO que a aplicação está pronta, QUANDO o usuário informar dois arrays com 10 valores
-        // //DEVE retornar se os mesmos são iguais ou diferentes  
-        // public void Should_return_if_is_equal_or_diferent(List<int> A, List<int> B)
+        [Fact]
+        //DADO que a aplicação está pronta, QUANDO o usuário informar dois arrays com 10 valores
+        //DEVE retornar se os mesmos são iguais ou diferentes  
+        public void Should_return_if_is_equal_or_diferent()
+        {
+            var listaA1 = new ListaArray1();
+            var A = new int[3]{1,2,3};
+            var B = new int[3]{1,2,3};
+
+            var result = listaA1.Exercise4(A, B);
+
+            Assert.True(result);
+        }
+
+        // [Theory]
+        // [InlineData(new int[5]{3,3,3,3,3}, 3)]
+        // //DADO que a aplicação está pronta, QUANDO o usuário informar 5 números 
+        // //DEVE retornar se a média aritmética dos mesmos e está abaixo, acima o na mádia 
+        // public void Should_return_if_the_average_is_below_above_or_in(int[] A, int expected)
         // {
         //     var listaA1 = new ListaArray1();
-        //     A = new List<int>{1,2,3};
-        //     B = new List<int>{1,2,3};
 
-        //     var result = listaA1.Exercise4(A, B);
-
-        //     Assert.True(result);
+        //     var result = listaA1.Exercise5(A);
         // }
 
     }
