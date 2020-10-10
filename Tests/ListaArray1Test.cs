@@ -12,10 +12,12 @@ namespace Tests
         // então a aplicação deverá restornar A menos B.
         [Theory]
         [InlineData(new int[4]{2,2,2,2},new int[4]{2,2,2,2}, new int[4]{0,0,0,0})]
-        public void Should_return_A_minus_B(int[] A, int[] B, int[] Expected)
+        public void Should_return_A_minus_B(int[] A, int[] B, int[] expected)
         {
             var listaA1 = new ListaArray1();
             IEnumerable<int> result = listaA1.Exercise1(A,B);      
+
+            Assert.Equal(expected, result);
         }
 
         [Fact]
@@ -54,16 +56,27 @@ namespace Tests
             Assert.True(result);
         }
 
-        // [Theory]
-        // [InlineData(new int[5]{3,3,3,3,3}, 3)]
-        // //DADO que a aplicação está pronta, QUANDO o usuário informar 5 números 
-        // //DEVE retornar se a média aritmética dos mesmos e está abaixo, acima o na mádia 
-        // public void Should_return_if_the_average_is_below_above_or_in(int[] A, int expected)
-        // {
-        //     var listaA1 = new ListaArray1();
+       [Theory]
+       [InlineData(new int[5]{3,3,3,3,3}, 3.0)]
+       public void Should_return_the_avarage_of_5_numbers(int[] A, double expected)
+       {
+           var listaA1 = new ListaArray1();
 
-        //     var result = listaA1.Exercise5(A);
-        // }
+           var result = listaA1.Exercise5(A);
+
+           Assert.Equal(expected, result);
+       }
+
+    //    [Theory]
+    //    [InlineData(new int[4]{4,3,2,1}, new int[4]{1,2,3,4}, new int[4]{5,5,5,5})]
+    //    public void Should_return_the_sum_of_A_and_B( int[] A, int [] B, int[] expectedArray )
+    //    {
+    //        var listaA1 = new ListaArray1();
+
+    //        var result = listaA1.Exercise6(A,B);
+
+    //        Assert.Equal(expectedArray, result);
+    //    }
 
     }
 }
