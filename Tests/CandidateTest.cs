@@ -37,7 +37,69 @@ namespace Tests
         {
             var Jose = new Candidate("José", "623.044.330-90");
             var Ana = new Candidate("Ana", "279.694.260-00");
+
+            Assert.NotEqual(Jose.Id, Ana.Id);
         }
 
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("000.000.000-00")]
+        [InlineData("677.A54.665-96")]
+        [InlineData("6684555954")]
+        [InlineData("455551112458")]
+        [InlineData("2111544451F")]
+        public void Should_return_false_when_CPF_is_incorrect(string Cpf)
+        {
+            var Jose = new Candidate("José", Cpf);
+
+            var isNotValid = Jose.Validate();
+
+            Assert.False(isNotValid);
+        }
+
+        [Theory]
+        [InlineData("089.511.540-92")]
+        [InlineData("09026054963")]
+        [InlineData("67770444934")]
+        [InlineData("95363306018")]
+        [InlineData("122.324.730-90")]
+        public void Should_return_true_when_CPF_is_correct(string Cpf)
+        {
+            var Ana = new Candidate("Ana", Cpf);
+
+            var isValid = Ana.Validate();
+
+            Assert.True(isValid);
+        }
+
+        [Theory]
+        [InlineData("Joao2")]
+        [InlineData("#Joao")]
+        [InlineData("")]
+        [InlineData(null)]
+        public void Should_return_false_when_Name_is_incorrect(string Name)
+        {
+            var candidateName = new Candidate(Name, "09026054963");
+
+            var isNotValid = candidateName.Validate();
+
+            Assert.False(isNotValid);
+        }
+
+        [Theory]
+        [InlineData("João")]
+        [InlineData("Ana")]
+        [InlineData("Maria Julia")]
+        public void Should_return_ture_when_Name_is_correct(string Name)
+        {
+            var candidateName = new Candidate(Name, "09026054963");
+
+            var isNotValid = candidateName.Validate();
+
+            Assert.True(isNotValid);
+        }
+
+        
     }
 }
