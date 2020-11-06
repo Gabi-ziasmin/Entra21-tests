@@ -8,11 +8,10 @@ namespace Domain.Users
 
         public string Name { get; set; }
 
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();  
 
         public User( string name, Profile profile)
         {
-            Id = Guid.NewGuid();
             Profile = profile;
             Name = name;
         }

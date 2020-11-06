@@ -9,12 +9,25 @@ namespace WebAPI.Controllers
 
     public class UsersController : ControllerBase
     {
+        public readonly UsersService _userService;
+
+        public UsersController()
+        {
+            _userService = new UsersService();            
+        }
         [HttpPost]
         public IActionResult Create(CreateUserRequest request)
         {
-            var user = new User(request.Name, request.Profile);
-            
-            return Ok(user.Id);
+            if (request.Profile == Profile.CBF && request.Password != "admin123")
+            {
+                return Unauthorized();
+            }
+
+            var userId = _userService.Create(request.Name, request.Profile);
+
+            return Ok(userId);
+
+            //BadRequest = quando passa informações inválidas
         }
     }
 }
