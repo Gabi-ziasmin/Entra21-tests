@@ -16,3 +16,6 @@ C:\GabrielleY\Entra21-tests\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.AssemblyInfo.c
 C:\GabrielleY\Entra21-tests\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.RazorTargetAssemblyInfo.cache
 C:\GabrielleY\Entra21-tests\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\GabrielleY\Entra21-tests\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
+C:\GabrielleY\Entra21-tests\WebAPI\bin\Debug\netcoreapp3.1\Domain.dll
+C:\GabrielleY\Entra21-tests\WebAPI\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\GabrielleY\Entra21-tests\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CopyComplete
