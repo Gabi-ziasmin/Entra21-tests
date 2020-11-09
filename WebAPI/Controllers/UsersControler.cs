@@ -15,6 +15,7 @@ namespace WebAPI.Controllers
         {
             _userService = new UsersService();            
         }
+
         [HttpPost]
         public IActionResult Create(CreateUserRequest request)
         {
@@ -25,9 +26,15 @@ namespace WebAPI.Controllers
 
             var userId = _userService.Create(request.Name, request.Profile);
 
-            return Ok(userId);
+            if (!userId.IsValid)
+            {
+                return BadRequest(userId.Errors);
+            }
 
-            //BadRequest = quando passa informações inválidas
+            return Ok(userId.Id);
+
+
+            //return BadRequest("O nome é inválido"); = quando passa informações inválidas
         }
     }
 }
