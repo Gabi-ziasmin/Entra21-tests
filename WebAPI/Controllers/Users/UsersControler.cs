@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using Domain.Users;
+﻿using Domain.Users;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebAPI.Controllers
+namespace WebAPI.Controllers.Users
 {
     [ApiController]
     [Route("[controller]")]

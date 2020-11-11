@@ -1,6 +1,6 @@
 using Domain.Users;
 
-namespace WebAPI.Controllers
+namespace WebAPI.Controllers.Users
 {
 
     public class CreateUserRequest  
