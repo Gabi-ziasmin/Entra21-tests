@@ -1,18 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Domain.People;
 
-namespace Domain.Users
+namespace Domain.Players
 {
-    public class User : Person
+    public class Player : Person
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public Profile Profile { get; set; }
+        public Guid Id { get; private set; } = Guid.NewGuid();
+        public int Goals { get; private set; }
 
-        public User(string name, Profile profile) : base(name)
-        {
-            Profile = profile;
-        }
+        public Player(string name) : base(name) {}
 
         public (IList<string> errors, bool isValid) Validate()
         {

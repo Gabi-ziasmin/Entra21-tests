@@ -6,3 +6,12 @@ C:\GabrielleY\Entra21-tests\Domain\bin\Debug\netstandard2.0\Domain.dll
 C:\GabrielleY\Entra21-tests\Domain\bin\Debug\netstandard2.0\Domain.pdb
 C:\GabrielleY\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.dll
 C:\GabrielleY\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.pdb
+C:\Gabi\Entra21-tests\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+C:\Gabi\Entra21-tests\Domain\bin\Debug\netstandard2.0\Domain.dll
+C:\Gabi\Entra21-tests\Domain\bin\Debug\netstandard2.0\Domain.pdb
+C:\Gabi\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+C:\Gabi\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+C:\Gabi\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+C:\Gabi\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+C:\Gabi\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.dll
+C:\Gabi\Entra21-tests\Domain\obj\Debug\netstandard2.0\Domain.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kMto8ZXercN5TFj2eWN7EoPefuR91jJQtyYm+vEntZ2MOOhWIKc8uxFZ+JuYwyLhDSI8uBccaGsVeF4qz3L67g==",
+  "success": true,
+  "projectFilePath": "C:\\Gabi\\Entra21-tests\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Edina\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Edina\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
