@@ -1,0 +1,10 @@
+C:\GabrielleYas\Entra21-tests\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\GabrielleYas\Entra21-tests\Domain\bin\Debug\netcoreapp3.1\Domain.runtimeconfig.json
+C:\GabrielleYas\Entra21-tests\Domain\bin\Debug\netcoreapp3.1\Domain.runtimeconfig.dev.json
+C:\GabrielleYas\Entra21-tests\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\GabrielleYas\Entra21-tests\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\GabrielleYas\Entra21-tests\Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+C:\GabrielleYas\Entra21-tests\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\GabrielleYas\Entra21-tests\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\GabrielleYas\Entra21-tests\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\GabrielleYas\Entra21-tests\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
